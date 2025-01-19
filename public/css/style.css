@@ -1,6 +1,15 @@
 html {
     box-sizing: border-box;
 }
+
 *, *::before, *::after {
     box-sizing: inherit;
+}
+
+#testButton {
+    background-color: aqua;
+}
+
+div {
+    border: 1px solid grey;
 }
