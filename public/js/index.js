@@ -1,12 +1,12 @@
-(function() {
-    "use strict"
+// (function() {
+//     "use strict"
     
-    document.querySelector("#testButton").addEventListener("click", handleClick);
+//     document.querySelector("#contact-form-button").addEventListener("click", submitMail);
 
-function handleClick() {
-    console.log("Thanks for clicking.");
-}
+// function submitMail() {
+//     console.log("You clicked the submit button.");
+// }
 
 // contact-form-button
 
-}());
+// }());
