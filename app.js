@@ -1,15 +1,20 @@
 import express from "express";
-const app = express()
-const port = 3000
+import dotenv from "dotenv";
+dotenv.config();
 
-app.use(express.static('public'))
+const app = express();
+const port = 3000;
+
+app.use(express.static('public'));
 
 // app.post("/mail", (req, res) => {
 //   console.log('mail button clicked')
 // })
 
+
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+    console.log(process.env.SENSITIVE_INFO);
+    console.log(`Example app listening on port ${port}`);
 });
 
 
