@@ -1,10 +1,10 @@
 (function() {
-    "use strict"
+    "use strict";
 
-    let form = document.querySelectorAll('#contact-form')
+    let form = document.querySelector('#contact-form');
     
     // document.querySelector("#contact-form-button").addEventListener("click", submitMail);
-    document.querySelector("#contact-form-button").addEventListener("click", (event) => {
+    document.querySelector("#send-contact").addEventListener("click", (event) => {
         event.preventDefault();
         event.stopPropagation();
         let formValid = true;
@@ -19,8 +19,8 @@
     });
     function sendTheEmail() {
         console.log("You clicked the submit button.");
-        let firstname = document.querySelector("#first-name").value;
-        let lastname = document.querySelector("#last-name").value;
+        let firstname = document.querySelector("#contact-first-name").value;
+        let lastname = document.querySelector("#contact-last-name").value;
         let email = document.querySelector("#mail").value;
         let message = document.querySelector("#msg").value;
         console.log("First name: " + firstname);
