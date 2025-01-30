@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-function sendMessage(sub, txt) {
+export async function sendMessage(sub, txt) {
     let transporter = nodemailer.createTransport(
         {
            host: process.env.MAIL_HOST,
@@ -11,13 +11,20 @@ function sendMessage(sub, txt) {
             pass: process.env.MAIL_PASSWORD,
            },
            requireTLS: process.env.MAIL_TLS,
-        }
-    )
+        });
         let message = {
-            from:,
-            to:,
-            subject:,
-            text:,
-        }
+            from: process.env.MESSAGE_FORM,
+            to: process.env.MESSAGE_TO,
+            subject: sub,
+            text: txt,
+        };
+        await transporter
+        .sendMail(message)
+        .then(() => {
+            console.log("Message sent");
+        })
+        .catch((err) => {
+            console.log("Message not sent - " + err);
+        });
 
 }
