@@ -1,5 +1,13 @@
-// (function() {
-//     "use strict"
+
+(function() {
+    "use strict"
+
+    document.querySelector("#project- button").addEventListener("click", project);
+    
+    function project() {
+    console.log("You clicked the submit button.");
+}
+
     
 //     document.querySelector("#contact-form-button").addEventListener("click", submitMail);
 
@@ -9,4 +17,4 @@
 
 // contact-form-button
 
-// }());
+}());
