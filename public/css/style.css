@@ -21,13 +21,13 @@ body {
   }
   
   .spacer {
-    min-height: 65px;
+    min-height: 75px;
   }
 
 
 #splash {
-    min-height: 800px;
-    background: url("./IMG_2820.jpg");
+    min-height: 700px;
+    background: url("/images/IMG_2820.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -23,10 +23,20 @@
         let lastname = document.querySelector("#last-name").value;
         let email = document.querySelector("#mail").value;
         let message = document.querySelector("#msg").value;
-        console.log("First name: " + firstname);
-        console.log("Last name: " + lastname);
-        console.log("Email: " + email);
-        console.log("Message: " + message);  
+        let obj = {
+            sub: "Someone submitted a contact form.",
+            txt: '${document.querySelector("#first-name").value}
+            ${document.querySelector("#last-name").value} 
+            sent you a message that reads ${document.querySelector("#msg").value}. 
+            They're email address is ${document.querySelector("#mail").value}',
+
+        };
+        console.log(obj)
+
+        // console.log("First name: " + firstname);
+        // console.log("Last name: " + lastname);
+        // console.log("Email: " + email);
+        // console.log("Message: " + message);  
 
     }   
 
