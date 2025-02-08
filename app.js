@@ -17,6 +17,14 @@ app.get('/', (req, res) => {
   app.get("/projects", (req, res) => {
     res.render("projects.ejs", {projectArray: data});
   });
+
+  app.get("/project/:id", (req, res) => {
+    let id = req.params.id;
+    if (id > data.length) {
+    throw new Error("No project with that ID");
+    }
+    res.render("project.ejs", {projectArray: data, which: id});
+  });
   app.get("/project", (req, res) => {
     res.render("project.ejs");
   });
