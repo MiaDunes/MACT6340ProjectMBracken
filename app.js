@@ -20,7 +20,9 @@ app.get('/', async  (req, res) => {
       console.log(projects);
       res.render("index.ejs");
     })
-    .catch(next);
+    .catch((err) => {
+      console.log(err);
+    });
   });
 
   app.get("/projects", (req, res) => {
