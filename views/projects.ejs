@@ -20,7 +20,8 @@
         
         <% projectArray.forEach((item, index) => { %>
         <div>
-            <a href='/project/<%= index + 1 %>'><%= item %></a>
+            <!-- <a href='/project/<%= index + 1 %>'><%= item %></a> -->
+            <%- include('projectCard', {ident: index.id, image: item.img_url, name: item.project_name}); %>
         </div>
         <% }); %>
 
