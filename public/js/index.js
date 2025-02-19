@@ -2,6 +2,8 @@
 (function() {
     "use strict"
 
+
+
 //     document.querySelector("#project-button").addEventListener("click", project);
     
 //     function project() {
@@ -16,5 +18,20 @@
 // }
 
 // contact-form-button
+
+// (() => {
+//     let userAddress = null;
+//     let connect = document.querySelector("#wallet-connect");
+  
+//     if (window.ethereum) {
+//       connectWallet();
+//     } else {
+//       userAddress = null;
+//       connect.innerHTML = "Connect Wallet";
+//     }
+  
+//     connect.addEventListener("click", async () => {
+//       connectWallet();
+//     });
 
 }());
