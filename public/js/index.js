@@ -1,37 +1,40 @@
 
 (function() {
-    "use strict"
-
-
-
-//     document.querySelector("#project-button").addEventListener("click", project);
+    "use strict";
+    "use strict";
     
-//     function project() {
-//     console.log("You clicked the Project button.");
-// }
-
-    
-//     document.querySelector("#contact-form-button").addEventListener("click", submitMail);
-
-// function submitMail() {
-//     console.log("You clicked the submit button.");
-// }
-
-// contact-form-button
-
-// (() => {
-//     let userAddress = null;
-//     let connect = document.querySelector("#wallet-connect");
+    (() => {
+    let userAddress = null;
+    let connect = document.querySelector("#wallet-connect");
   
-//     if (window.ethereum) {
-//       connectWallet();
-//     } else {
-//       userAddress = null;
-//       connect.innerHTML = "Connect Wallet";
-//     }
+    if (window.ethereum) {
+      connectWallet();
+    } else {
+      userAddress = null;
+      connect.innerHTML = "Connect Wallet";
+    }
   
-//     connect.addEventListener("click", async () => {
-//       connectWallet();
-//     });
+    connect.addEventListener("click", async () => {
+      connectWallet();
+    });
+    async function connectWallet() {
+        await window.ethereum
+        .request({method: "eth_requestAccounts"})
+        .then((data) => {
+            let userAddress = data[0];
+            let walletString =
+            userAddress.substring(0,5) + "..." +
+            userAddress(38, 45);
+            connect.innerHTML = walletString;
+            return userAddress;
+        })
+        .catch((err) => {
+            if (err.code === 4001) {
+                console.log("Please connect a wallect.");
+            } else {
+                console.error(err);
+            }
+        });
+    }
 
-}());
+})();
