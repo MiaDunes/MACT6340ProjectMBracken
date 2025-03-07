@@ -23,7 +23,8 @@ app.get('/', async  (req, res) => {
       // query the database for project records
       projects = await db.getAllProjects();
       console.log(projects);
-      res.render("index.ejs");
+      let featuredRand = Math.floor(Math.random() * projects.length);
+      res.render("index.ejs", { featuredProject: projects[featuredRand] });
     })
     .catch((err) => {
       console.log(err);
@@ -41,9 +42,9 @@ app.get('/', async  (req, res) => {
     }
     res.render("project.ejs", {projectArray: data, which: id});
   });
-  app.get("/project", (req, res) => {
-    res.render("project.ejs");
-  });
+  // app.get("/project", (req, res) => {
+  //   res.render("project.ejs");
+  // });
   app.get("/contact", (req, res) => {
     res.render("contact.ejs");
   });
