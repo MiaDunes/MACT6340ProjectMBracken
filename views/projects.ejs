@@ -29,7 +29,7 @@
                 <div class="m-1 row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 text-center justify-content-center">
                   <% projectArray.forEach((item, index) => {%>
                   <div class="col-10">
-                    <%- include('projectCard', {image: item.img_url, name: item.project_name, ident: item.id}); %>
+                    <%- include('projectCard', {ident:index+1, image: item.img_url, name: item.project_name, ident: item.id}); %>
                   </div>
                   <% }); %>
                 </div>

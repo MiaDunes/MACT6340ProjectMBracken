@@ -39,12 +39,12 @@
 
         <section>
           <div class="container">
-            <!-- Featured project area -->
             <div id="featured" class="area">
-              <div class="spacer"></div>
+              <!-- <div class="spacer"></div> -->
               <div class="row justify-content-center">
                 <div class="col-10 text-center justify-content-center">
-                  <h3 class="display-3">Featured Project</h3>
+                  <!-- <h3 class="display-3">Featured Project</h3> -->
+                  <h1 class="display-4 fw-bold text-body-emphasis">Feature</h1>
                   <div class="row">
                     <div><% let i = featuredProject.img_url %></div>
                     <div class="col-12 col-md-6">
@@ -52,8 +52,6 @@
                     </div>
                     <div class="col-12 col-md-4">
                       <div class="m-5">
-                        <a href="/projects"><button id="allProjectsButton" type="button" class="m-2 btn btn-outline-dark">See
-                            all projects</button></a>
                       </div>
                     </div>
                   </div>
@@ -62,18 +60,14 @@
             </div>
           </div>
         </section>
-
-
-
-
-
+        <!-- <a href="/projects/<% featuredProject.id %>"><button id="allProjectsButton" type="button"
+          class="m-2 btn btn-outline-dark">See -->
         <div class="px-4 pt-5 my-5 text-center border-bottom">
-            <h1 class="display-4 fw-bold text-body-emphasis">Feature</h1>
             <div class="col-lg-6 mx-auto">
               <p class="lead mb-4">Processing images.</p>
-              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
 
-                <div><a href="/project"><button id="project-button" type="button"
+                <div><a href="/project/<%= featuredProject.id %>"><button id="project-button" type="button"
                   class="m-2 btn btn-outline-light">Go to this
                   project</button></a></div>
             <div><a href="/projects"><button id="proejcts-button" type="button"

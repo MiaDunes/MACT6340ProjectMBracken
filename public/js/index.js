@@ -1,9 +1,6 @@
-
-(function() {
-    "use strict";
-    "use strict";
+"use strict";
+(()=> {
     
-    (() => {
     let userAddress = null;
     let connect = document.querySelector("#wallet-connect");
   
