@@ -40,7 +40,7 @@ app.get('/', async  (req, res) => {
     if (id > data.length) {
     throw new Error("No project with that ID");
     }
-    res.render("project.ejs", {projectArray: data, which: id});
+    res.render("project.ejs", {project: projects[id-1], which: id});
   });
   // app.get("/project", (req, res) => {
   //   res.render("project.ejs");
